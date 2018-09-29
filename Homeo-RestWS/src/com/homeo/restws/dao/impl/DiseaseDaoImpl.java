@@ -53,7 +53,7 @@ public class DiseaseDaoImpl implements DiseaseDao {
 		}catch(DuplicateKeyException de) {
 			errorMsg = de.getMessage();
 			errorCode = "DiseaseDaoImpladdDiseaseDuplicate";//code will be class name plus methodname
-			logger.error(errorCode+"-"+errorMsg);
+			logger.error(errorCode+"-addDisease-"+errorMsg);
 		}catch(Exception ex){
 			ex.printStackTrace();
 			errorMsg = ex.getMessage();
